@@ -1,0 +1,26 @@
+<div style = 
+"background-color: black;
+width : 600px; 
+height: 600px;
+float: center" class= "img-responsive center-block" >
+
+<img [src]="[srcImage]" style =
+"float : center;
+display: block;
+    max-width:480px;
+    max-height:600px;
+    width: 400px;
+    height: 600px;
+    background-color: black"
+alt="" class="img-responsive center-block" >
+</div>
+<br>
+<br>
+<button class="btn btn-primary btn-lg mt-10" (click)="movePrevious()" 
+*ngIf= "!isFirst"
+style="float:left; margin-left:150px ">Show Previous</button>
+
+<button class="btn btn-primary btn-lg mt-10"
+(click)="moveNext()"  *ngIf= "!isLast"
+style="float:right; margin-right : 150px">Show Next</button>
+
