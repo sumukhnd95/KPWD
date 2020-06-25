@@ -8,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   examDate : Date= new Date(2019, 3, 11)
   NumberOfDays : number = Date.now()
-  
- diff =  Math.floor(( Date.now() -Date.parse("2019-03-11"))/3600000) 
+  days
+  hours
+  constructor() { 
+    let diff =  Math.floor(( Date.now() -Date.parse("2019-03-11"))/3600000) 
  
- days  = Math.floor(this.diff/24)
- hours = Math.floor(this.diff/(this.days *24) ) +10
-  constructor() { }
+ this.days  = Math.floor(diff/24)
+ this.hours = Math.floor(diff/(this.days *24) ) +10
+  }
 
   ngOnInit() {
    // alert(Date.parse("2019-03-11"))

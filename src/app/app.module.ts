@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { TimeLineComponent } from './time-line/time-line.component';
 import { HeaderComponent } from './header/header.component';
 import {RouterModule} from '@angular/router';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component'; 
+import {CommonModule} from '@angular/common'
 const route = [
   {path :'',  redirectTo: 'home' , pathMatch :'full' },
   {path :'home',  component : HomeComponent },
@@ -22,7 +23,8 @@ const route = [
   ],
   imports: [
     BrowserModule, 
-    RouterModule.forRoot(route)
+    RouterModule.forRoot(route), 
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
